@@ -24,26 +24,34 @@ hr {
   margin-top: 15px;
   border: 2px dashed gray;
 }
-#left-nav {
+.left-nav {
+  display: flex;
+  flex-direction: column;
   width: 35%;
   float: left;
   margin: 0px;
   background-color: lightgrey;
+  padding-bottom: 30px;
 }
 h2,
 h3,
 hr {
   padding: 0px 0px 0px 30px;
 }
-#left-nav span {
+.content-container {
+  display: flex;
+}
+.left-nav span {
   padding: 0px 0px 0px 30px;
   position: relative;
   top: 5px;
 }
-#left-nav a {
+.left-nav a {
   color: brown;
 }
-article {
+.article {
+  display: flex;
+  flex-direction: column;
   width: 65%;
   float: left;
 }
@@ -63,4 +71,16 @@ p {
 .details span {
   margin: 10px;
   font-weight: bold;
+}
+
+@media (min-width: 320px) and (max-width: 778px) {
+  .content-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-nav, .article {
+    width: 100%;
+  }
 }
